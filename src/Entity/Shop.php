@@ -11,8 +11,10 @@ class Shop
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[Groups(['shop:list'])]
     private ?int $id = null;
 
+    #[Groups(['shop:list'])]
     #[ORM\Column(length: 100)]
     private ?string $name = null;
 
